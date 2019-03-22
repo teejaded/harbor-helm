@@ -32,6 +32,7 @@ expose:
   clusterIP:
     # The name of ClusterIP service
     name: harbor
+    annotations: {}
     ports:
       # The service port Harbor listens on when serving with HTTP
       http: 80
@@ -40,6 +41,7 @@ expose:
   nodePort:
     # The name of NodePort service
     name: harbor
+    annotations: {}
     ports:
       http:
         # The service port Harbor listens on when serving with HTTP
@@ -54,6 +56,7 @@ expose:
   loadBalancer:
     # The name of LoadBalancer service
     name: harbor
+    annotations: {}
     ports:
       # The service port Harbor listens on when serving with HTTP
       http: 80
