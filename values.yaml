@@ -54,6 +54,8 @@ expose:
   loadBalancer:
     # The name of LoadBalancer service
     name: harbor
+    # Optional static LoadBalancer IP address
+    #loadBalancerIP:
     ports:
       # The service port Harbor listens on when serving with HTTP
       http: 80

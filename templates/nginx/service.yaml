@@ -56,6 +56,9 @@ spec:
       port: {{ $loadBalancer.ports.https }}
       targetPort: 443
     {{- end }}
+  {{- if $loadBalancer.loadBalancerIP }}
+  loadBalancerIP: {{ $loadBalancer.loadBalancerIP }}
+  {{- end }}
 {{- end }}
   selector:
 {{ include "harbor.matchLabels" . | indent 4 }}
