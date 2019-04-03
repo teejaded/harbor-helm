@@ -99,6 +99,7 @@ spec:
       {{- if .Values.expose.tls.enabled }}
       - name: ca-download
         secret:
+          optional: true
           secretName: "{{ template "harbor.certificate-secret" . }}"
           items:
             - key: ca.crt
