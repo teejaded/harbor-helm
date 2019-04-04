@@ -247,6 +247,21 @@ portal:
   ## Additional deployment annotations
   podAnnotations: {}
 
+adminserver:
+  image:
+    repository: goharbor/harbor-adminserver
+    tag: v1.7.5
+  replicas: 1
+  # resources:
+  #  requests:
+  #    memory: 256Mi
+  #    cpu: 100m
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}
+  ## Additional deployment annotations
+  podAnnotations: {}
+
 core:
   image:
     repository: goharbor/harbor-core

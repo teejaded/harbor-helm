@@ -279,3 +279,7 @@ host:port,pool_size,password
     {{- printf "%s" $expose.tls.commonName -}}
   {{- end }}
 {{- end -}}
+
+{{- define "harbor.adminserver" -}}
+  {{- printf "%s-adminserver" (include "harbor.fullname" .) -}}
+{{- end -}}
